@@ -78,11 +78,11 @@ bintray {
     publish = true
     pkg {
         userOrg = 'osreadplugins' // If you want to publish to an organization
-        name = "onePer"
-        issueTrackerUrl = "https://github.com/epeach/onePer/issues"
-        vcsUrl = "https://github.com/epeach/grails-onePer"
+        name = "timeWord"
+        issueTrackerUrl = "https://github.com/epeach/timeWord/issues"
+        vcsUrl = "https://github.com/epeach/grails-timeWord"
         version {
-            attributes = ['grails-plugin': "org.osread:onePer"]
+            attributes = ['grails-plugin': "org.osread:timeWord"]
             name = 0.1
         }
     }

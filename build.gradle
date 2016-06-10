@@ -71,3 +71,19 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
+bintray {
+    user = "epeach"//System.getenv("BINTRAY_USER") ?: project.hasProperty("bintrayUser") ? project.bintrayUser : ''
+    key = "7a7deab933fc8dfad38e04bd8397426767561a9b"//System.getenv("BINTRAY_KEY") ?: project.hasProperty("bintrayKey") ? project.bintrayKey : ''
+    publications = ['maven']
+    publish = true
+    pkg {
+        userOrg = 'osreadplugins' // If you want to publish to an organization
+        name = "onePer"
+        issueTrackerUrl = "https://github.com/epeach/onePer/issues"
+        vcsUrl = "https://github.com/epeach/grails-onePer"
+        version {
+            attributes = ['grails-plugin': "org.osread:onePer"]
+            name = 0.1
+        }
+    }
+}

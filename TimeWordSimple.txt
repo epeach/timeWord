@@ -1,0 +1,11 @@
+{
+    "type": "timeWord",
+    "name": "Example Input Gabillion",
+	"seconds": 15.0,
+	"oneAtTime": false,
+	"words": [
+		"Hello",
+		"Weird",
+		"Spot"
+	]
+}

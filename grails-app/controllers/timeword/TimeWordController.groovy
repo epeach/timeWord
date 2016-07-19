@@ -1,5 +1,3 @@
-package timeword
-
 import timeword.timeWord
 import metafunctionality.Module
 import metafunctionality.ModuleOutput
@@ -16,10 +14,10 @@ class TimeWordController {
 
     def start() {
         String inputID = Module.findByModuleId(params.id).inputID
-        timeWord input = timeWord.findByModuleDataID(inputID)
-        List<String> words = input.words
-        Boolean one = input.oneAtTime
-        Double seconds = input.seconds
+        timeWord input1 = timeWord.findByModuleDataID(inputID)
+        List<String> words = input1.words
+        Boolean one = input1.oneAtTime
+        Double seconds = input1.seconds
         //Store Module in saveModuleService
         [words:words, one:one, seconds:seconds, modID:params.id]
     }
@@ -42,7 +40,7 @@ class TimeWordController {
         } else {
             m.outputIDs = [output.moduleDataID]
         }
-        output.type = "FirstExample"
+        output.type = "timeWord"
         m.isCompleted = true
         m.save(flush: true)
         output.save(flush: true)
